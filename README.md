@@ -1,4 +1,4 @@
-This is a website following [Erfan Amade's](https://www.instagram.com/erfan.amade/) design for Rayca assessment
+This is a website following [Erfan Amade's](https://www.instagram.com/erfan.amade/) design for [Rayca Precision](https://raycabio.com/)'s assessment
 
 #### Install dependencies
 ```
