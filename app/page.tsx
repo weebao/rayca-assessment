@@ -1,95 +1,68 @@
+"use client";
+
 import Image from "next/image";
-import styles from "./page.module.css";
+
+import {
+  Button,
+  Card,
+  Container,
+  Flex,
+  TextFieldRoot,
+  TextFieldSlot,
+  TextFieldInput,
+} from "@radix-ui/themes";
+import { Search } from "@/components/icons";
+import { DownloadMenu } from "@/components/DownloadMenu";
+import { DownloadNav } from "@/components/DownloadNav";
+import { DownloadTable } from "@/components/DownloadTable";
+import { DiskSpaceCard } from "@/components/DiskSpaceCard";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="main">
+      <Card className="font-mont window">
+        <div className="bar">
+          <Flex>
+            <Image src="/logo.webp" alt="IDM" layout="fill" />
+            <span>Internet Download Manager 10.36</span>
+          </Flex>
+          <div className="bar-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <nav className="menu">
+          <Flex className="menu-bar" gap="5">
+            <Button variant="ghost">Tasks</Button>
+            <Button variant="ghost">File</Button>
+            <Button variant="ghost">Downloads</Button>
+            <Button variant="ghost">View</Button>
+            <Button variant="ghost">Help</Button>
+          </Flex>
+          <TextFieldRoot className="menu-search">
+            <TextFieldSlot>
+              <Search height="20" width="20" />
+            </TextFieldSlot>
+            <TextFieldInput
+              placeholder="Search in the list"
+              variant="soft"
+              size="3"
+              radius="large"
+            />
+          </TextFieldRoot>
+        </nav>
+        <div className="content">
+          <div className="side-menu">
+            <DownloadMenu />
+            <DiskSpaceCard />
+          </div>
+          <div className="downloads">
+            <DownloadNav />
+            <DownloadTable />
+          </div>
+        </div>
+      </Card>
     </main>
   );
 }

@@ -1,0 +1,24 @@
+.rt-ContextMenuViewport {
+  padding: 20px 24px !important;
+  background: radial-gradient(circle at top left, #2B2E36, #16161E) !important;
+
+  svg {
+    color: #939496;
+    margin-left: 4px;
+    margin-right: 12px;
+  }
+  .tabler-icon {
+    margin-left: 0px;
+    margin-right: 16px;
+  }
+  .no-margin-right {
+    margin-right: 0;
+  }
+  .disabled {
+    background: transparent !important;
+    color: #7D7E81;
+    svg {
+      color: #505156;
+    }
+  }
+}

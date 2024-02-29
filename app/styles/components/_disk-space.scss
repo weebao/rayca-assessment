@@ -1,0 +1,50 @@
+.disk-space {
+  --card-border-radius: 20px !important;
+  padding: 16px 16px;
+  font-size: 0.85rem;
+  color: #E9E9EA;
+  svg {
+    color: #E9E9EA;
+  }
+  .rt-CardInner {
+    border-radius: 0px;
+    overflow: visible;
+  }
+  .database-icon {
+    height: 20px;
+  }
+  .usage {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .arc-icon {
+      margin-right: 16px;
+      margin-bottom: -12px;
+    }
+
+    .reaction {
+      .emoji {
+        font-size: 2rem;
+      }
+    }
+
+    .percentage {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .gradient-btn {
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(to right, #209996, #A556F7);
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 8px 2px #6177C6;
+    }
+  }
+}

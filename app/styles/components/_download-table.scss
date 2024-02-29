@@ -1,0 +1,108 @@
+.download-table {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  th, td {
+    box-shadow: none;
+  }
+
+  .name {
+    &-type {
+      font-size: 0.75rem;
+      color: #55555A;
+    }
+  }
+
+  .rt-CheckboxButton {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &[data-state='checked'] {
+      background-color: transparent;
+      overflow: hidden;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #209996, #A556F7) !important;
+      }
+    }
+  }
+
+  
+  .rt-TableColumnHeaderCell {
+    svg {
+      height: 16px;
+    }
+    .chevron-up-down {
+      position: relative;
+      height: 2px;
+      width: 24px;
+      svg {
+        position: absolute;
+      }
+      .tabler-icon-chevron-up {
+        bottom: -3px;
+      }
+      .tabler-icon-chevron-down {
+        top: -3px;
+      }
+    }
+    .rt-Button {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+  }
+
+  .rt-TableRow {
+    &:hover {
+      background: linear-gradient(to right, #2b2d3492, #2b2d3413);
+    }
+    .rt-TableCell {
+      vertical-align: middle;
+      &:first-child {
+        padding-left: 26px;
+      }
+    }
+  }
+  .progress-bar {
+    height: 8px;
+    background-color: #1B1C1E;
+    border-radius: 16px;
+    div {
+      height: 100%;
+      background: linear-gradient(to right, #209996, #A556F7);
+      border-radius: 16px;
+    }
+  }
+}
+
+.footer {
+  justify-self: end;
+  width: 100%;
+  padding: 24px 32px;
+  border-top: 1.5px solid #33333A;
+  background-color: #16161E;
+
+  .speed {
+    svg {
+      color: #47484D;
+    }
+    span {
+      &:first-child {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 500;
+      }
+      &:last-child {
+        margin-left: 4px;
+        color: #8A8A8B;
+      }
+    }
+  }
+}

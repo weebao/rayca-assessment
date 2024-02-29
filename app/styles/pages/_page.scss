@@ -1,0 +1,133 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.window {
+  width: min(1200px, 90vw);
+  background-color: #16161e !important;
+  color: #fbfbfc;
+  
+  .rt-CardInner {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.logo {
+  max-height: 20px;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  max-height: 24px;
+  margin-top: 20px;
+  margin-left: 36px;
+  img {
+    position: static !important;
+    width: auto !important;
+  }
+  span {
+    margin-left: 12px;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+  }
+  &-dots {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 26px;
+
+    div {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:nth-child(1) {
+        background-color: #ED7069;
+      }
+  
+      &:nth-child(2) {
+        background-color: #EDCC87;
+      }
+  
+      &:nth-child(3) {
+        background-color: #6DC15C;
+      }
+    }
+
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-bottom: solid 1.5px #33333A;
+
+  button {
+    color: #A1A1A3;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-bar {
+    margin-left: 46px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  &-search {
+    min-width: 276px;
+    margin-left: 16px;
+    margin-right: 22px;
+    align-items: center;
+
+    div[data-radius="large"] {
+      border-radius: 16px;
+    }
+
+    .rt-TextFieldSlot {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  max-height: 710px;
+
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 270px;
+    padding: 12px 20px;
+    border-right: solid 1.5px #33333A;
+    overflow: hidden;
+  }
+}
+
+.downloads {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

@@ -1,0 +1,53 @@
+.download-nav {
+  padding: 16px;
+  border-bottom: solid 1.5px #33333A;
+}
+
+.add-url {
+  max-width: 240px;
+  min-width: 180px;
+  align-items: center;
+  
+  div[data-radius="large"] {
+    border-radius: 16px;
+  }
+
+  svg {
+    stroke-width: 2;
+  }
+
+  .rt-TextFieldSlot {
+    padding: 8px 12px;
+
+    &:last-child {
+      padding-right: 8px;
+    }
+  }
+
+  .rt-IconButton {
+    padding: 4px;
+    border-radius: 12px;
+    background: linear-gradient(to bottom, #209996, #A556F7);
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 8px 2px #6177C6;
+    }
+  }
+}
+
+.nav-btn {
+  flex-direction: column;
+  min-width: 56px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.rotate {
+    svg {
+      transform: rotate(270deg);
+    }
+  }
+}

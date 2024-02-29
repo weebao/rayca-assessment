@@ -1,0 +1,134 @@
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/mauve.css';
+@import '@radix-ui/colors/violet.css';
+
+/* Radix Accordion */
+button,
+h3 {
+  all: unset;
+}
+
+.AccordionRoot {
+  width: 100%;
+}
+
+.AccordionItem {
+  overflow: hidden;
+  margin-top: 1px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.AccordionItem:first-child {
+  padding-top: 8px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.AccordionItem:not(:first-child) {
+  border-top: none;
+}
+
+.AccordionItem:not(:last-child) {
+  border-bottom: none;
+}
+
+.AccordionItem:last-child {
+  padding-bottom: 8px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-top: none;
+}
+
+.AccordionItem {
+  position: relative;
+  z-index: 1;
+  border: solid 1.5px #1D1E26;
+  // box-shadow: 0 0 0 2px var(--mauve-12);
+}
+
+.AccordionHeader {
+  display: flex;
+
+  svg {
+    color: #A4A4A5;
+  }
+}
+
+.AccordionTrigger {
+  font-family: inherit;
+  background-color: transparent;
+  padding: 0 20px;
+  height: 45px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1;
+  // color: var(--violet-11);
+  // box-shadow: 0 1px 0 var(--mauve-6);
+}
+
+.AccordionContent {
+  overflow: hidden;
+  font-size: 14px;
+  margin: 4px 0;
+
+  svg {
+    height: 20px;
+  }
+}
+.AccordionContent[data-state='open'] {
+  animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.AccordionContent[data-state='closed'] {
+  animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.AccordionContentItem {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 56px;
+  transition: background-color 100ms cubic-bezier(0.87, 0, 0.13, 1);
+
+  &:hover {
+    background-color: #49494e65;
+    cursor: pointer;
+  }
+
+  span {
+    color: #7D7E81;
+  }
+}
+
+.AccordionChevron {
+  color: #939496;
+  transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.AccordionTrigger[data-state='open'] {
+  .AccordionChevron {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 251px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: 251px;
+  }
+  to {
+    height: 0;
+  }
+}
