@@ -42,7 +42,7 @@ export default function Home() {
           </Flex>
           <TextFieldRoot className="menu-search">
             <TextFieldSlot>
-              <Search height="20" width="20" />
+              <Search />
             </TextFieldSlot>
             <TextFieldInput
               placeholder="Search in the list"

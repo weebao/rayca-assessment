@@ -1,6 +1,6 @@
 import React from "react";
 
-export const GradientArc: React.FC = (props) => {
+export const GradientArc: React.FC<{ className: string }> = ({ className }) => {
   return (
     <svg
       width="91"
@@ -8,7 +8,7 @@ export const GradientArc: React.FC = (props) => {
       viewBox="0 0 91 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
+      className={className}
     >
       <path
         d="M84.5 25.0178C76 13.0178 59 4.49991 41.5 7.49999C26 10.1572 8 22.5178 6 43.5179"

@@ -38,6 +38,7 @@ import {
 } from "@radix-ui/themes";
 
 export type Download = {
+  select?: boolean;
   id: number;
   name: string;
   type: string;
@@ -163,7 +164,7 @@ export const columns = [
             <IconChevronUp />
           )
         ) : (
-          <div class="chevron-up-down">
+          <div className="chevron-up-down">
             <IconChevronUp />
             <IconChevronDown />
           </div>
@@ -201,7 +202,7 @@ export const columns = [
             <IconChevronUp />
           )
         ) : (
-          <div class="chevron-up-down">
+          <div className="chevron-up-down">
             <IconChevronUp />
             <IconChevronDown />
           </div>
@@ -235,7 +236,7 @@ export const columns = [
             <IconChevronUp />
           )
         ) : (
-          <div class="chevron-up-down">
+          <div className="chevron-up-down">
             <IconChevronUp />
             <IconChevronDown />
           </div>
@@ -275,7 +276,7 @@ export const columns = [
             <IconChevronUp />
           )
         ) : (
-          <div class="chevron-up-down">
+          <div className="chevron-up-down">
             <IconChevronUp />
             <IconChevronDown />
           </div>
@@ -308,7 +309,7 @@ export const columns = [
             <IconChevronUp />
           )
         ) : (
-          <div class="chevron-up-down">
+          <div className="chevron-up-down">
             <IconChevronUp />
             <IconChevronDown />
           </div>
@@ -363,7 +364,6 @@ export const DownloadTable = () => {
                   <TableRow data-state={row.getIsSelected() && "selected"}>
                     {row.getVisibleCells().map((cell) => (
                       <TableCell key={cell.id}>
-                        {console.log(cell)}
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()

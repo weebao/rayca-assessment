@@ -1,6 +1,6 @@
 import React from "react";
 
-export const IconSquareMinus: React.FC = (props) => {
+export const IconSquareMinus: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +13,6 @@ export const IconSquareMinus: React.FC = (props) => {
       stroke-linecap="round"
       stroke-linejoin="round"
       className="tabler-icon"
-      {...props}
     >
       <g clip-path="url(#clip0_108_13062)">
         <path d="M18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4Z" />

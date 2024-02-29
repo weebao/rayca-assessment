@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Speedometer: React.FC = (props) => {
+export const Speedometer: React.FC = () => {
   return (
     <svg
       width="41"
@@ -8,7 +8,6 @@ export const Speedometer: React.FC = (props) => {
       viewBox="0 0 41 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
       <path
         d="M2.49993 20.5C1.99996 9 14.5 -1 26.4999 4"
